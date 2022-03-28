@@ -21,7 +21,7 @@ public class SeatController {
 	SeatService service;
 
 	@GetMapping("/SearchSeat/{locationId}")
-	public ResponseEntity<String> findBylocationId(@Validated @PathVariable int locationId) {
+	public ResponseEntity<String> findBylocationId(@PathVariable int locationId) {
 		String status = null;
 		Optional<Seat> s = service.findBylocationId(locationId);
 
